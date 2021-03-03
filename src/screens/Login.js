@@ -25,6 +25,20 @@ function Login() {
           </form>
         </div>
       </div>
+      <div className="tv__section">
+        <div className="ifo__left">
+          <h1>Enjoy on your TV.</h1>
+          <h3>
+            Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray
+            players, and more.
+          </h3>
+        </div>
+        <img
+          className="img__tv"
+          src="https://github.com/karlhadwen/netflix/blob/master/public/images/misc/home-tv.jpg?raw=true"
+          alt=""
+        />
+      </div>
     </div>
   );
 }

@@ -80,3 +80,37 @@
 .login__input {
   margin: 20px;
 }
+.tv__section {
+  position: absolute;
+  display: flex;
+  background-color: black;
+}
+.img__tv {
+  width: 40%;
+  height: 40%;
+}
+.ifo__left {
+  color: whitesmoke;
+  margin-left: 10rem;
+  margin-top: 4rem;
+  margin-right: 8rem;
+}
+.ifo__left > h1 {
+  align-items: flex-start;
+  font-weight: 900;
+  font-size: 3rem;
+}
+@media (max-width: 860px) {
+  .tv__section {
+    display: grid;
+  }
+  .img__tv {
+    width: 60%;
+    height: 60%;
+  }
+  .ifo__left {
+    margin-left: 3rem;
+    margin-top: 4rem;
+    margin-right: 3rem;
+  }
+}
