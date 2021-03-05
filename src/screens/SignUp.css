@@ -1,6 +1,6 @@
 .signUp {
   max-width: 400px;
-
+  opacity: 0.8;
   padding: 70px;
   margin-left: auto;
   margin-right: auto;
@@ -36,4 +36,11 @@
   text-align: left;
   margin-top: 30px;
   color: aliceblue;
+}
+.signup_under {
+  color: gray;
+}
+.signup__sign:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
