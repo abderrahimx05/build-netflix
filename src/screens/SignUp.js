@@ -8,6 +8,10 @@ function SignUp() {
         <input placeholder="Email" type="email" />
         <input placeholder="password" type="password" />
         <button type="submit"> Sign In</button>
+        <h4>
+          {" "}
+          <span className="signup_under"> New to Netflix?</span> Sign up now.
+        </h4>
       </form>
     </div>
   );

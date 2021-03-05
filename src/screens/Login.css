@@ -38,15 +38,20 @@
   background-color: #e50914;
   cursor: pointer;
 }
+.nav__black {
+  background-color: black;
+}
 .login__body {
   position: absolute;
   top: 30%;
   z-index: 1;
   color: #fff;
-  padding: 75px 0;
+  padding: 5px 0;
   max-width: 950px;
   margin: 0 auto;
   text-align: center;
+  left: 0;
+  right: 0;
 }
 .login__body > h1 {
   font-size: 3rem;
@@ -80,80 +85,57 @@
 .login__input {
   margin: 20px;
 }
-.tv__section {
-  position: absolute;
-  display: flex;
-  background-color: black;
-  border-bottom: 8px solid #222;
-}
-.img__tv {
-  width: 40%;
-  height: 40%;
-}
-.ifo__left {
-  color: whitesmoke;
-  margin-left: 10rem;
-  margin-top: 4rem;
-  margin-right: 8rem;
-}
-.ifo__left > h1 {
-  align-items: flex-start;
-  font-weight: 900;
-  font-size: 3rem;
-}
 
-@media (max-width: 860px) {
+@media screen and (max-width: 700px) {
   .tv__section,
   .mb__section,
   .mac__section {
-    display: grid;
+    flex-direction: column;
+    align-items: center;
   }
+
   .img__tv,
   .img__mobile,
   .img__mac {
-    width: 60%;
-    height: 60%;
+    margin: 0 0;
+    min-width: 20px;
   }
-  .ifo__left,
-  .ifo__right,
-  .ifo__mac {
-    margin-left: 3rem;
-    margin-top: 4rem;
-    margin-right: 3rem;
+  .ifo__left {
+    margin: 80px 80px;
+    font-size: 26px;
+  }
+  .ifo__left > h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .ifo__left > h6 {
+    font-size: 15px;
+    margin: 0;
   }
 }
-.mb__section {
-  margin-top: 25%;
-  position: absolute;
-  display: flex;
-  color: #fff;
-  background-color: black;
-  border-bottom: 8px solid #222;
-}
+
+.img__tv,
 .img__mobile,
 .img__mac {
-  margin-top: 4rem;
-  margin-left: 4rem;
-  margin-bottom: 3rem;
+  margin: 0 75px;
+  max-width: 100%;
+  height: auto;
 }
-.ifo__right,
-.ifo__mac {
-  color: whitesmoke;
-  margin-left: 10rem;
-  margin-top: 9rem;
-  margin-right: 8rem;
+.ifo__left {
+  margin-top: 7rem;
+  margin-left: 3rem;
+  font-size: 26px;
 }
-.ifo__right > h1,
-.ifo__mac > h1 {
-  align-items: flex-start;
-  font-weight: 900;
-  font-size: 3rem;
+.ifo__left > h1 {
+  margin-bottom: 10px;
 }
-.mac__section {
-  position: absolute;
+
+.mac__section,
+.mb__section,
+.tv__section {
   display: flex;
-  margin-top: 60%;
+
   color: #fff;
   background-color: black;
-  border-bottom: 8px solid;
+  border-bottom: 8px solid #5d5d5a;
 }
