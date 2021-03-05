@@ -28,13 +28,11 @@ function SignUp() {
         <input ref={emailRef} placeholder="Email" type="email" />
         <input ref={passwordRef} placeholder="password" type="password" />
         <button type="submit" onClick={signIn}>
-          {" "}
           Sign In
         </button>
         <h4>
           <span className="signup_under"> New to Netflix?</span>
           <span className="signup__sign" onClick={register}>
-            {" "}
             Sign up now.
           </span>
         </h4>
