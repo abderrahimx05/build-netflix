@@ -20,7 +20,7 @@ function App() {
           })
         );
       } else {
-        dispatch(logout);
+        dispatch(logout());
       }
     });
     return unsubscribe;
