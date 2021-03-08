@@ -54,5 +54,17 @@
   border: none;
   cursor: pointer;
 }
-.profile__signOut {
+@media screen and (max-width: 600px) {
+  .profile {
+    position: relative;
+  }
+  .profile_body {
+    position: absolute;
+    padding-top: 6rem;
+    margin-left: 3rem;
+  }
+  .profile_body > h1 {
+    font-size: 40px;
+    font-weight: 400;
+  }
 }
