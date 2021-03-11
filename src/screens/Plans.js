@@ -3,6 +3,7 @@ import db from "../firebase";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import "./Plans.css";
+import { loadStripe } from "@stripe/stripe-js";
 function Plans() {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
@@ -42,6 +43,13 @@ function Plans() {
         //here show the message error
         alert(`An error occured : ${error.message}`);
       }
+      if (sessionId) {
+        //todo : initial stripe
+        const stripe = await loadStripe(
+          "pk_test_51IShp9LG54DzVbjPm3o6NusAXuLBrlcSz5Zbw2IIVKnD0okv4XcAp8CYkLxZ5OAePaWxOQm81ksLWOMiAJDUw8r4002wXzqIZ0"
+        );
+        stripe.redirectToCheckout({ sessionId });
+      }
     });
   };
   return (
@@ -54,7 +62,7 @@ function Plans() {
               <h5>{productData.name}</h5>
               <h6>{productData.description}</h6>
             </div>
-            <button onClick={() => loadCheckout(productData.prices.price.Id)}>
+            <button onClick={() => loadCheckout(productData.prices.priceId)}>
               Subscribe
             </button>
           </div>
