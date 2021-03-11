@@ -1,0 +1,29 @@
+.plans__plans {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.plans__plans:hover {
+  opacity: 0.8;
+}
+.plans__plans > button {
+  padding: 20px;
+  font-size: 1rem;
+  color: aliceblue;
+  background-color: #e50914;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 680px) {
+  .plans__info {
+    padding-right: 20px;
+  }
+
+  .plans__plans > button {
+    font-size: 0.5rem;
+    margin-left: auto;
+    font-weight: 800;
+    padding: 10px;
+  }
+}

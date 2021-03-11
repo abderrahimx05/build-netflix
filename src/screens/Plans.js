@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import db from "../firebase";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 import "./Plans.css";
 function Plans() {
   const [products, setProducts] = useState([]);
+  const user = useSelector(selectUser);
   useEffect(() => {
     db.collection("products")
       .where("active", "==", true)
@@ -23,6 +26,24 @@ function Plans() {
       });
   }, []);
   console.log(products);
+  const loadCheckout = async (priceId) => {
+    const docRef = await db
+      .collection("customers")
+      .doc(user.uid)
+      .collection("checkout_sessions")
+      .add({
+        price: priceId,
+        success_url: window.location.origin,
+        cancel_url: window.location.origin,
+      });
+    docRef.onSnapshot(async (snap) => {
+      const { error, sessionId } = snap.data();
+      if (error) {
+        //here show the message error
+        alert(`An error occured : ${error.message}`);
+      }
+    });
+  };
   return (
     <div className="plans">
       {Object.entries(products).map(([productId, productData]) => {
@@ -32,8 +53,10 @@ function Plans() {
             <div className="plans__info">
               <h5>{productData.name}</h5>
               <h6>{productData.description}</h6>
-              <button>Subscribe</button>
             </div>
+            <button onClick={() => loadCheckout(productData.prices.price.Id)}>
+              Subscribe
+            </button>
           </div>
         );
       })}
