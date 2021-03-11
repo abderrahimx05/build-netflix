@@ -7,6 +7,21 @@ import { loadStripe } from "@stripe/stripe-js";
 function Plans() {
   const [products, setProducts] = useState([]);
   const user = useSelector(selectUser);
+  const [subscription, setSubscription] = useState(null);
+  useEffect(() => {
+    db.collection("customers")
+      .doc(user.uid)
+      .collection("subscriptions")
+      .get()
+      .then((querySnapshot) => {
+        querySnapshot.forEach(async (subscription) => {
+          setSubscription({
+            role: subscription.data().role,
+            current_period_end: subscription.data().for,
+          });
+        });
+      });
+  }, []);
   useEffect(() => {
     db.collection("products")
       .where("active", "==", true)
