@@ -117,7 +117,7 @@
 .img__tv,
 .img__mobile,
 .img__mac {
-  margin: 0 75px;
+  
   max-width: 100%;
   height: auto;
 }

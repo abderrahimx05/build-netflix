@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import SignUp from "./SignUp";
-
+import Footer  from '../Footer'
 function Login() {
   const [signIn, setSignIn] = useState(false);
   return (
@@ -76,6 +76,18 @@ function Login() {
           </div>
           <img className="img__mac" src="./images/home.jpg" alt="" />
         </div>
+        <div className="login__input">
+                <form>
+                  <input type="email" placeholder="Email Address" />
+                  <button
+                    onClick={() => setSignIn(true)}
+                    className="button__getStarted"
+                  >
+                    GET STARTED
+                  </button>
+                </form>
+              </div>
+        <Footer/>
       </div>
     </div>
   );

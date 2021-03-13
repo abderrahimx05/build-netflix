@@ -1,0 +1,37 @@
+.footer{
+    background-color:black;
+    color: gray;
+    
+}
+
+.all__rows{
+    
+    display : flex;
+    padding  : 70px 70px;
+    margin : auto;
+    max-width : 1000px;
+    justify-content:center;
+   
+    
+    font-weight:400
+   
+
+}
+
+
+ li{
+    margin-bottom : 8px;
+}
+li:hover{
+    opacity:1;
+    cursor:pointer;
+}
+ul {
+    list-style-type: none;
+}
+@media screen and (max-width:700px){
+    li{
+       
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
