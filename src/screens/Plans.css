@@ -27,3 +27,10 @@
     padding: 10px;
   }
 }
+.plans__plans--disabled > button{
+
+  background-color: gray !important;
+}
+.plans__date{
+  font-weight:500
+}
