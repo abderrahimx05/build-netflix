@@ -129,6 +129,7 @@
 .img__mac {
   max-width: 100%;
   height: auto;
+  margin-left: 60px;
 }
 .ifo__left {
   margin-top: 7rem;

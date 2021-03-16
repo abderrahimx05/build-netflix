@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import SignUp from "./SignUp";
 import Footer from "../Footer";
+import Card from "../Card";
 function Login() {
-  const [show, setShow] = useState(false);
-  const transitionNavBar = () => {
-    if (window.scrollY > 100) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", transitionNavBar);
-
-    return () => {
-      window.removeEventListener("scroll", transitionNavBar);
-    };
-  }, []);
   const [signIn, setSignIn] = useState(false);
   return (
     <div className="log__all">
       <div className="login">
-        <div className={`login__backGround ${show && "nav__black"}`}>
+        <div className="login__backGround">
           <img
             className="login__logo"
             src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
@@ -91,7 +77,7 @@ function Login() {
           </div>
           <img className="img__mac" src="./images/home.jpg" alt="" />
         </div>
-
+        <Card />
         <Footer />
       </div>
     </div>
