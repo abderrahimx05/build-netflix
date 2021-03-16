@@ -74,6 +74,14 @@
   border: none;
   max-width: 680px;
 }
+.login__inputUnder > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 680px;
+}
 .button__getStarted {
   padding: 16px 20px;
   font-size: 1rem;
@@ -113,11 +121,12 @@
     margin: 0;
   }
 }
-
+.nav__black {
+  background-color: black;
+}
 .img__tv,
 .img__mobile,
 .img__mac {
-  
   max-width: 100%;
   height: auto;
 }
