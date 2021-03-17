@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import HomeScreen from "./screens/HomeScreen";
 import Login from "./screens/Login";
 import "./App.css";
-import Register from "./screens/Register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,11 +29,7 @@ function App() {
     <div className="app">
       <Router>
         {!user ? (
-          <Switch>
-            <Route exact path="/register" component={Register} />
-
-            <Route exact path="/login" component={Login} />
-          </Switch>
+          <Login />
         ) : (
           <Switch>
             <Route path="/profile">

@@ -60,19 +60,18 @@ function Login() {
           <img className="img__mobile" src="./images/home-mobile.jpg" alt="" />
 
           <div className="ifo__left">
-            <h1>Enjoy on your TV.</h1>
+            <h1>Download your shows to watch offline.</h1>
             <h6>
-              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
-              Blu-ray players, and more
+              Save your favorites easily and always have something to watch.
             </h6>
           </div>
         </div>
         <div className="mac__section">
           <div className="ifo__left">
-            <h1>Enjoy on your TV.</h1>
+            <h1>Watch everywhere.</h1>
             <h6>
-              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
-              Blu-ray players, and more
+              Stream unlimited movies and TV shows on your phone, tablet,
+              laptop, and TV without paying more.
             </h6>
           </div>
           <img className="img__mac" src="./images/home.jpg" alt="" />
