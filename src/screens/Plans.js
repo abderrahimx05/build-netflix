@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
 import "./Plans.css";
 import { loadStripe } from "@stripe/stripe-js";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 function Plans() {
   const [products, setProducts] = useState([]);

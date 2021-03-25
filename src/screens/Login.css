@@ -25,10 +25,12 @@
   object-fit: contain;
   padding-left: 20px;
   cursor: pointer;
+  background-color: black;
 }
+
 .login__button {
   position: fixed;
-  right: 20px;
+  right: 28px;
   border: none;
   width: 100px;
   top: 20px;
@@ -149,4 +151,7 @@
   color: #fff;
   background-color: black;
   border-bottom: 8px solid #5d5d5a;
+}
+.login__backGround {
+  justify-content: space-around;
 }
