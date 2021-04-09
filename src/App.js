@@ -32,10 +32,10 @@ function App() {
           <Login />
         ) : (
           <Switch>
-            <Route path="/profile">
+            <Route exact path="/profile">
               <Profile />
             </Route>
-            <Route exact path="/">
+            <Route  path="/">
               <HomeScreen />
             </Route>
           </Switch>

@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import "./Login.css";
 import SignUp from "./SignUp";
 import Footer from "../Footer";
+import { useHistory } from "react-router-dom";
 
 function Login() {
+  const navigate = useHistory();
+
   const [signIn, setSignIn] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
   const backStep = () => setActiveStep((prevActiveStep) => prevActiveStep - 1);
@@ -13,6 +16,7 @@ function Login() {
         <div className="login__backGround">
           <div className="img">
             <img
+              onClick={() => navigate.push("/")}
               className="login__logo"
               src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
               alt=""

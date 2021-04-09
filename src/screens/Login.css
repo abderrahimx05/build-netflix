@@ -17,6 +17,7 @@
     rgba(0, 0, 0, 0.8) 100%
   );
 }
+/* .login */
 .login__logo {
   position: fixed;
   left: 0;
@@ -25,7 +26,6 @@
   object-fit: contain;
   padding-left: 20px;
   cursor: pointer;
-  background-color: black;
 }
 
 .login__button {
@@ -123,8 +123,10 @@
     margin: 0;
   }
 }
-.nav__black {
-  background-color: black;
+
+.pup__section {
+  margin-top: 10%;
+  position: relative;
 }
 .img__tv,
 .img__mobile,
@@ -154,4 +156,5 @@
 }
 .login__backGround {
   justify-content: space-around;
+  position: relative;
 }
